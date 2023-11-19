@@ -53,7 +53,7 @@ for msg in st.session_state.messages:
 if file and question and api_key:
     data = file.read().decode()
     data = cut_text_under_limit(data)
-    data_msg = f"""## Data: \n\n{data}\n\n---\n## Question: {question}"""
+    data_msg = f"""## Data: \n\n{data}\n\n---\n## Question: {question}\n---\n"""
     ai = OpenAI(api_key=api_key)
     st.session_state.messages.append({"role": "user", "content": data_msg})
     st.chat_message("human").write(data_msg)
