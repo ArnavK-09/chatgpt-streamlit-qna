@@ -35,6 +35,7 @@ with st.sidebar:
     """
 
 st.title("📝 Custom Q&A") 
+st.caption("Powered By ChatGPT")
 file = st.file_uploader("Upload your text file", type=("txt", "md")) 
 question = st.chat_input(
     placeholder="Provide me a short summary?",
